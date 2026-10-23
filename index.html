@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>The Layer Fox · Redesign Shortlist</title>
-<meta name="description" content="Twelve shortlisted homepage redesign concepts for The Layer Fox, shown on desktop and mobile.">
+<meta name="description" content="Shortlisted homepage redesign concepts for The Layer Fox, shown on desktop and mobile.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap">
 <style>
@@ -22,7 +22,7 @@ h1 { font-family:Fraunces,Georgia,serif; font-weight:700; font-size:clamp(40px,7
 .intro p { margin:0; max-width:620px; font-size:17px; line-height:1.6; color:var(--muted) }
 .btn { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:0 18px; border-radius:999px; background:var(--accent); color:var(--onAccent); text-decoration:none; font-weight:600; font-size:14px; border:1px solid var(--accent) }
 .btn.ghost { background:transparent; color:var(--ink); border-color:var(--line) }
-.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,520px),1fr)); gap:28px; padding:40px 0 64px }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,520px),1fr)); gap:28px; padding:24px 0 24px }
 .card { background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:16px; display:flex; flex-direction:column; gap:16px }
 .shots { position:relative; padding-right:22%; }
 .shots img { display:block; width:100%; height:auto }
@@ -34,6 +34,7 @@ h2 { margin:0; font-family:Fraunces,Georgia,serif; font-weight:600; font-size:24
 h2 span { color:var(--muted); font-weight:600 }
 .meta p { margin:6px 0 0; color:var(--muted); font-size:15px; line-height:1.5 }
 .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:auto }
+.section { font-family:Fraunces,Georgia,serif; font-weight:700; font-size:clamp(28px,4vw,40px); margin:48px 0 0 } .section-intro { margin:8px 0 0; color:var(--muted); font-size:16px }
 footer { border-top:1px solid var(--line); padding:28px 0 40px; color:var(--muted); font-size:14px; line-height:1.6 }
 </style>
 </head>
@@ -43,12 +44,13 @@ footer { border-top:1px solid var(--line); padding:28px 0 40px; color:var(--mute
     <p class="kicker">Homepage redesign · Final shortlist</p>
     <h1>The Layer Fox</h1>
     <div class="intro">
-      <p>Twelve shortlisted designs for the new homepage, each built for desktop and mobile. They all use the pub’s current copy, offers, opening times and contact details. Hatched boxes show where photos will go.</p>
+      <p>Twelve shortlisted designs for the new homepage plus three themed extras, each built for desktop and mobile. They all use the pub’s current copy, offers, opening times and contact details. Hatched boxes show where photos will go.</p>
       <a class="btn" href="The-Layer-Fox-Final-Shortlist.pdf" download>Download PDF</a>
     </div>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" style="padding-bottom:48px">
+  <h2 class="section">The shortlist</h2>
   <div class="grid">
     <article class="card">
       <div class="shots">
@@ -252,6 +254,61 @@ footer { border-top:1px solid var(--line); padding:28px 0 40px; color:var(--mute
       <div class="actions">
         <a class="btn" href="designs/seventies-1.html">Full page</a>
         <a class="btn ghost" href="phone.html#seventies-1">Phone view</a>
+      </div>
+    </article>
+  </div>
+  <h2 class="section">Themed extras</h2>
+  <p class="section-intro">Three playful takes on the same content, inspired by game and cartoon styles.</p>
+  <div class="grid">
+    <article class="card">
+      <div class="shots">
+        <a class="desk" href="designs/fantasy-quest.html" aria-label="Open Fantasy Quest · Stone &amp; Parchment full page"><img src="thumbs/fantasy-quest-d.jpg" alt="Fantasy Quest · Stone &amp; Parchment on desktop" loading="lazy" width="1280" height="860"></a>
+        <a class="phone" href="phone.html#fantasy-quest" aria-label="Preview Fantasy Quest · Stone &amp; Parchment on a phone"><img src="thumbs/fantasy-quest-m.jpg" alt="Fantasy Quest · Stone &amp; Parchment on a phone" loading="lazy" width="390" height="760"></a>
+      </div>
+      <div class="meta">
+        <span class="num">13</span>
+        <div>
+          <h2>Fantasy Quest <span>· Stone &amp; Parchment</span></h2>
+          <p>Fantasy adventure game style: quest scroll, inventory grid, chat-log reviews</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn" href="designs/fantasy-quest.html">Full page</a>
+        <a class="btn ghost" href="phone.html#fantasy-quest">Phone view</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="shots">
+        <a class="desk" href="designs/tactical-ops.html" aria-label="Open Tactical Ops · Night Vision full page"><img src="thumbs/tactical-ops-d.jpg" alt="Tactical Ops · Night Vision on desktop" loading="lazy" width="1280" height="860"></a>
+        <a class="phone" href="phone.html#tactical-ops" aria-label="Preview Tactical Ops · Night Vision on a phone"><img src="thumbs/tactical-ops-m.jpg" alt="Tactical Ops · Night Vision on a phone" loading="lazy" width="390" height="760"></a>
+      </div>
+      <div class="meta">
+        <span class="num">14</span>
+        <div>
+          <h2>Tactical Ops <span>· Night Vision</span></h2>
+          <p>Military shooter style: mission briefing, loadouts, zones and intel reports</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn" href="designs/tactical-ops.html">Full page</a>
+        <a class="btn ghost" href="phone.html#tactical-ops">Phone view</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="shots">
+        <a class="desk" href="designs/paper-cutout.html" aria-label="Open Paper Cutout · Snowy Village full page"><img src="thumbs/paper-cutout-d.jpg" alt="Paper Cutout · Snowy Village on desktop" loading="lazy" width="1280" height="860"></a>
+        <a class="phone" href="phone.html#paper-cutout" aria-label="Preview Paper Cutout · Snowy Village on a phone"><img src="thumbs/paper-cutout-m.jpg" alt="Paper Cutout · Snowy Village on a phone" loading="lazy" width="390" height="760"></a>
+      </div>
+      <div class="meta">
+        <span class="num">15</span>
+        <div>
+          <h2>Paper Cutout <span>· Snowy Village</span></h2>
+          <p>Construction-paper cartoon style: thick outlines, speech bubbles, fox mascot</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn" href="designs/paper-cutout.html">Full page</a>
+        <a class="btn ghost" href="phone.html#paper-cutout">Phone view</a>
       </div>
     </article>
   </div>
