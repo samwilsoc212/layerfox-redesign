@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Phone Preview · The Layer Fox</title>
+<style>
+:root { --bg:#1A1A18; --ink:#F2EFE8; --muted:#A8A399; --line:#3A3833; }
+* { box-sizing:border-box }
+body { margin:0; min-height:100vh; background:var(--bg); color:var(--ink); font-family:system-ui,-apple-system,sans-serif; display:flex; flex-direction:column; align-items:center }
+.bar { width:100%; max-width:760px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; padding:16px }
+a, button { color:var(--ink); font:inherit; font-size:14px }
+.nav { display:flex; gap:8px }
+.nav a, .back { display:inline-flex; align-items:center; min-height:44px; padding:0 16px; border:1px solid var(--line); border-radius:999px; text-decoration:none }
+h1 { font-size:16px; font-weight:600; margin:0; width:100%; text-align:center; order:3 }
+.device { width:414px; max-width:calc(100% - 32px); border:12px solid #000; border-radius:44px; overflow:hidden; box-shadow:0 30px 80px rgba(0,0,0,.5); margin:8px 0 40px; background:#000 }
+iframe { display:block; width:100%; height:min(844px, calc(100vh - 160px)); border:0; background:#fff }
+@media (max-width:480px) { .device { border:0; border-radius:0; width:100%; max-width:100%; margin:0 } iframe { height:calc(100vh - 120px) } }
+</style>
+</head>
+<body>
+<div class="bar">
+  <a class="back" href="index.html">← All designs</a>
+  <div class="nav"><a id="prev" href="#">← Prev</a><a id="next" href="#">Next →</a></div>
+  <h1 id="name"></h1>
+</div>
+<div class="device"><iframe id="f" title="Phone preview"></iframe></div>
+<script>
+const NAMES = {"heritage-1": "Heritage · Hunter & Brass", "heritage-5": "Heritage · Sage & Terracotta", "bold-1": "Bold · Fox Orange", "bold-2": "Bold · Teal & Tangerine", "rustic-2": "Rustic · Kraft & Ale", "boutique-3": "Boutique · Midnight", "boutique-4": "Boutique · Olive Grove", "pub-sign-1": "Pub Sign · Racing Green & Gold", "pub-sign-5": "Pub Sign · Teal & Brass", "gastropub-5": "Gastropub Noir · Claret", "menu-card-4": "Menu Card · Butcher’s Paper", "seventies-1": "Seventies · Burnt Orange"};
+const SLUGS = Object.keys(NAMES);
+function show() {
+  let s = location.hash.slice(1); if (!NAMES[s]) s = SLUGS[0];
+  const i = SLUGS.indexOf(s);
+  document.getElementById('f').src = 'designs/' + s + '.html';
+  document.getElementById('name').textContent = (i + 1) + ' of ' + SLUGS.length + ' · ' + NAMES[s];
+  document.getElementById('prev').href = '#' + SLUGS[(i - 1 + SLUGS.length) % SLUGS.length];
+  document.getElementById('next').href = '#' + SLUGS[(i + 1) % SLUGS.length];
+}
+addEventListener('hashchange', show); show();
+</script>
+</body>
+</html>
